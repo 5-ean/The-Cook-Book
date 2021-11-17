@@ -1,16 +1,30 @@
 {% extends "base.html" %}
-{% block content %}
+{% block recipes %}
 
-    <h2>Extend</h2>
+<header class="bg-primary bg-gradient text-white">
+    <div class="container px-4 text-center">
+        <h1 class="fw-bolder">Recipes</h1>
+        <p class="lead">A functional Bootstrap 5 boilerplate for one page scrolling websites</p>
+        <a class="btn btn-lg btn-light" href="#about">Start scrolling!</a>
+    </div>
+</header>
 
-    {% for recipe in recipes %}
-        {{ recipe.recipe_name }}<br>
-        {{ recipe.cuisine_type }}<br>
-        {{ recipe.recipe_description }}<br>
-        {{ recipe.recipe_difficulty }}<br>
-        {{ recipe.prep_time }}<br>
-        {{ recipe.cook_time }}<br>
-        {{ recipe.ingredients }}<br>
-    {% endfor %}
+<section class="bg-light" id="services">
+    <div class="container px-4">
+        <div class="row gx-4 justify-content-center text-center">
+            <div class="col-lg-8">
+                {% for recipe in recipes %}
+                <h2>{{ recipe.recipe_name }}</h2>
+                <p class="lead">{{ recipe.cuisine_type }}<br>
+                    {{ recipe.recipe_description }}<br>
+                    {{ recipe.recipe_difficulty }}<br>
+                    {{ recipe.prep_time }}<br>
+                    {{ recipe.cook_time }}<br>
+                    {{ recipe.ingredients }}<br>
+                {% endfor %}</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 {% endblock %}
