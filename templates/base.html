@@ -33,9 +33,21 @@
             </div>
         </div>
     </nav>
-    {% block register %}
-    <!-- Header-->
     {% block recipes %}
+    <section id="flash-messages">
+        <!-- flash messages -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                <div class="row flashes">
+                    <h4>{{ message }}</h4>
+                </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </section>
+    <!-- Header-->
+    {% block register %}
     <header class="bg-primary bg-gradient text-white">
         <div class="container px-4 text-center">
             <h1 class="fw-bolder">Welcome to Scrolling Nav</h1>
