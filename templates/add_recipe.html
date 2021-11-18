@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block recipes %}
+<header class="bg-primary bg-gradient text-white">
+    <div class="container px-5 text-center">
+        <h1 class="fw-bolder">Add a recipe</h1>
+        <p class="lead"></p>
+        
+    </div>
+</header>
+
+<div class="container px-5 my-5">
+    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+        <div class="form-floating mb-3">
+            <input class="form-control" id="recipeName" type="text" placeholder="Recipe Name" data-sb-validations="required" />
+            <label for="recipeName">Recipe Name</label>
+            <div class="invalid-feedback" data-sb-feedback="recipeName:required">Recipe Name is required.</div>
+        </div>
+        <div class="form-floating mb-3">
+            <textarea class="form-control" id="recipeDescription" type="text" placeholder="Recipe Description" style="height: 10rem;" data-sb-validations="required"></textarea>
+            <label for="recipeDescription">Recipe Description</label>
+            <div class="invalid-feedback" data-sb-feedback="recipeDescription:required">Recipe Description is required.</div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="typeOfCuisine" aria-label="Type of Cuisine">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                    <label for="typeOfCuisine">Type of Cuisine</label>
+                </div>
+            </div>
+            <div class="form-floating mb-3">
+                <select class="form-select" id="cookingDifficulty" aria-label="Cooking Difficulty">
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                </select>
+                <label for="cookingDifficulty">Cooking Difficulty</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="prepTimeMins" type="text" placeholder="Prep-Time (mins)" data-sb-validations="required" />
+                <label for="prepTimeMins">Prep-Time (mins)</label>
+                <div class="invalid-feedback" data-sb-feedback="prepTimeMins:required">Prep-Time (mins) is required.</div>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control" id="cookTimeMins" type="text" placeholder="Cook-Time (mins)" data-sb-validations="required" />
+                <label for="cookTimeMins">Cook-Time (mins)</label>
+                <div class="invalid-feedback" data-sb-feedback="cookTimeMins:required">Cook-Time (mins) is required.</div>
+            </div>
+        </div>
+        <div class="form-floating mb-3">
+            <textarea class="form-control" id="ingredientsWithQuantities" type="text" placeholder="Ingredients With Quantities " style="height: 10rem;" data-sb-validations="required"></textarea>
+            <label for="ingredientsWithQuantities">Ingredients With Quantities </label>
+            <div class="invalid-feedback" data-sb-feedback="ingredientsWithQuantities:required">Ingredients With Quantities is required.</div>
+        </div>
+        <div class="form-floating mb-3">
+            <textarea class="form-control" id="method" type="text" placeholder="Method" style="height: 10rem;" data-sb-validations="required"></textarea>
+            <label for="method">Method</label>
+            <div class="invalid-feedback" data-sb-feedback="method:required">Method is required.</div>
+        </div>
+        <div class="form-floating mb-3">
+            <input class="form-control" id="newField23" type="text" placeholder="New Field 23" data-sb-validations="required" />
+            <label for="newField23">New Field 23</label>
+            <div class="invalid-feedback" data-sb-feedback="newField23:required">New Field 23 is required.</div>
+        </div>
+        <div class="d-none" id="submitSuccessMessage">
+            <div class="text-center mb-3">
+                <div class="fw-bolder">Form submission successful!</div>
+                <p>To activate this form, sign up at</p>
+                <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+            </div>
+        </div>
+        <div class="d-none" id="submitErrorMessage">
+            <div class="text-center text-danger mb-3">Error sending message!</div>
+        </div>
+        <div class="d-grid">
+            <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+{% endblock %}
