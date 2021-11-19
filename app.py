@@ -99,9 +99,26 @@ def profile(username):
     return redirect(url_for("login"))
 
 
-@app.route("/add_recipe")
+@app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
-    return render_template("add_recipe.html")
+    if request.method == "POST":
+        recipe = {
+            "cuisine_type": request.form.get("cuisine_type"),
+            "recipe_name": request.form.get("recipe_name"),
+            "recipe_description": request.form.get("recipe_description"),
+            "recipe_difficulty": request.form.get("recipe_difficulty"),
+            "prep_time": request.form.get("prep_time"),
+            "cook_time": request.form.get("cook_time"),
+            "ingredients": request.form.get("ingredients"),
+            "method": request.form.get("method"),
+            "added_by": session["user"]
+        }
+        mongo.db.recipes.insert_one(recipe)
+        flash("Recipe Successfully Added")
+        return render_template(url_for("recipes"))
+
+    cuisines = mongo.db.cuisine.find().sort("cuisine_type", 1)
+    return render_template("add_recipe.html", cuisines=cuisines)
 
 
 
