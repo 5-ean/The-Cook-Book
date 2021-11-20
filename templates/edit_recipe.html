@@ -2,7 +2,7 @@
 {% block recipes %}
 <header class="bg-primary bg-gradient text-white">
     <div class="container px-5 text-center">
-        <h1 class="fw-bolder">Add A Recipe</h1>
+        <h1 class="fw-bolder">Edit Your Recipe</h1>
         <p class="lead"></p>
         
     </div>
@@ -10,7 +10,7 @@
 
 <div class="container px-5 my-5">
     <!-- Add recipe form -->
-    <form id="contactForm" method="POST" action="{{ url_for('add_recipe') }}">
+    <form id="contactForm" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
         <div class="form-floating mb-3">
             <!-- Recipe Name -->
             <input class="form-control" id="recipe_name" name="recipe_name" type="text" placeholder="Recipe Name" maxlength="20" required/>
@@ -76,7 +76,7 @@
         </div>
         <div class="d-grid">
             <!-- Submit Button -->
-            <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Submit</button>
+            <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Edit Recipe</button>
         </div>
     </form>
 </div>

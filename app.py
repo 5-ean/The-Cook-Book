@@ -115,10 +115,19 @@ def add_recipe():
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe Successfully Added")
-        return render_template(url_for("recipes"))
+        return redirect(url_for("profile", username=["user"]))
 
     cuisines = mongo.db.cuisine.find().sort("cuisine_type", 1)
     return render_template("add_recipe.html", cuisines=cuisines)
+
+
+@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+def edit_recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+
+    cuisines = mongo.db.cuisine.find().sort("cuisine_type", 1)
+    return render_template(
+        "edit_recipe.html", recipe=recipe, cuisines=cuisines)
 
 
 
@@ -127,4 +136,3 @@ if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             debug=True)
-

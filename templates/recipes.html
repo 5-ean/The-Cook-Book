@@ -9,12 +9,14 @@
     </div>
 </header>
 
-<div class="container px-4">
-    <div class="row gx-4 justify-content-center">
+<div class="container">
+    <div class="row">
         <div class="col-lg-8">
             {% for recipe in recipes %}
             <h2>{{ recipe.recipe_name }}</h2>
             <p class="lead">{{ recipe.recipe_description }}</p>
+        </div>
+        <div class="col">
             <ul>
                 <li>{{ recipe.cuisine_type }} style recipe</li>
                 <li>Difficulty : {{ recipe.recipe_difficulty }} </li>
@@ -26,5 +28,7 @@
         </div>
     </div>
 </div>
+<a class="btn btn-md btn-success" href="#">Save</a>
+<a class="btn btn-md btn-primary" href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">Edit</a>
 
 {% endblock %}

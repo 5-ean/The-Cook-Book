@@ -9,7 +9,11 @@ section#flash-messages {
 
 .flashes h4 {
   line-height: 2;
-  background-color: #0dcaf0
+  background-color: #4cc6df
+}
+
+.btn-md {
+  margin: 5px
 }
 
 /*!

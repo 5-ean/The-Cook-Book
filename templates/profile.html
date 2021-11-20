@@ -5,18 +5,29 @@
     <div class="container px-4 text-center">
         <h1 class="fw-bolder">{{username}}'s profile</h1>
         <p class="lead">A functional Bootstrap 5 boilerplate for one page scrolling websites</p>
-        <a class="btn btn-lg btn-light" href="#about">Start scrolling!</a>
+        <a class="btn btn-lg btn-success" href="{{ url_for('add_recipe') }}">Add</a>
+        <a class="btn btn-lg btn-primary" href="#about">Edit</a>
+        <a class="btn btn-lg btn-danger" href="#about">Delect</a>
     </div>
 </header>
 
-<section class="bg-light" id="profile-content">
-    <div class="container px-4">
-        <div class="row gx-4 justify-content-center text-center">
-            <div class="col-lg-8">
 
-            </div>
+<div class="container px-4">
+    <div class="row gx-4 justify-content-center">
+        <div class="col-lg-8">
+            {% for recipe in recipes %}
+            <h2>{{ recipe.recipe_name }}</h2>
+            <p class="lead">{{ recipe.recipe_description }}</p>
+            <ul>
+                <li>{{ recipe.cuisine_type }} style recipe</li>
+                <li>Difficulty : {{ recipe.recipe_difficulty }} </li>
+                <li>{{ recipe.prep_time }}</li>
+                <li>{{ recipe.cook_time }}</li>
+                <li>{{ recipe.ingredients }}</li>
+            </ul>
+            {% endfor %}
         </div>
     </div>
-</section>
+</div>
 
 {% endblock %}
