@@ -29,3 +29,7 @@ section#flash-messages {
 .btn-md {
   margin: 5px
 }
+
+#submitbtn, #cancelbtn {
+  text-align: center;
+}
