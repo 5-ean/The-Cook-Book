@@ -24,11 +24,11 @@
                 <li>{{ recipe.cook_time }}</li>
                 <li>{{ recipe.ingredients }}</li>
             </ul>
+            <a class="btn btn-md btn-success" href="#">Save</a>
+            <a class="btn btn-md btn-primary" href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">Edit</a>
             {% endfor %}
         </div>
     </div>
 </div>
-<a class="btn btn-md btn-success" href="#">Save</a>
-<a class="btn btn-md btn-primary" href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">Edit</a>
 
 {% endblock %}
