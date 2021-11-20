@@ -13,51 +13,59 @@
     <form id="contactForm" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
         <div class="form-floating mb-3">
             <!-- Recipe Name -->
-            <input class="form-control" id="recipe_name" name="recipe_name" type="text" placeholder="Recipe Name" maxlength="20" required/>
+            <input class="form-control" id="recipe_name" name="recipe_name" type="text"
+             maxlength="25" value="{{ recipe.recipe_name }}" required/>
             <label for="recipe_name">Recipe Name</label>
             <div class="invalid-feedback" data-sb-feedback="recipeName:required">Recipe Name is required.</div>
         </div>
         <div class="form-floating mb-3">
             <!-- Recipe Description -->
-            <textarea class="form-control" id="recipe_description" name="recipe_description" type="text" placeholder="Recipe Description" style="height: 10rem;" required></textarea>
+            <textarea class="form-control" id="recipe_description" name="recipe_description" type="text"
+             style="height: 10rem;" required>{{ recipe.recipe_description }}</textarea>
             <label for="recipe_description">Recipe Description</label>
             <div class="invalid-feedback" data-sb-feedback="recipeDescription:required">Recipe Description is required.</div>
         </div>
         <div class="row">
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="form-floating mb-3">
                     <!-- Type of cuisine selection -->
                     <select class="form-select" id="cuisine_type" name="cuisine_type" required>
                         {% for cuisine in cuisines %}
-                            <option value="{{ cuisine.cuisine_type }}">{{ cuisine.cuisine_type }}</option>
+                            {% if cuisine.cuisine_type == recipe.cuisine_type %}
+                                <option value="{{ cuisine.cuisine_type }}" selected>{{ cuisine.cuisine_type }}</option>
+                            {% else %}
+                                <option value="{{ cuisine.cuisine_type }}">{{ cuisine.cuisine_type }}</option>
+                            {% endif %}
                         {% endfor %}
                     </select>
                     <label for="cuisine_type">Type of Cuisine</label>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="form-floating mb-3">
                     <!-- Cooking Difficulty (easy, Medium, Hard) -->
-                    <select class="form-select" id="cooking_difficulty" name="cooking_difficulty" required>
+                    <select class="form-select" id="recipe_difficulty" name="recipe_difficulty" required>
                         <option value="Easy">Easy</option>
                         <option value="Medium">Medium</option>
                         <option value="Hard">Hard</option>
                     </select>
-                    <label for="cooking_difficulty">Cooking Difficulty</label>
+                    <label for="recipe_difficulty">Cooking Difficulty</label>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="form-floating mb-3">
                     <!-- Preperation time (Mins) -->
-                    <input class="form-control" id="prep_time" name="prep_time" type="text" placeholder="Prep-Time (mins)" required/>
+                    <input class="form-control" id="prep_time" name="prep_time" type="text" 
+                    value="{{ recipe.prep_time }}" required/>
                     <label for="prep_time">Prep-Time (mins)</label>
                     <div class="invalid-feedback" data-sb-feedback="prepTimeMins:required">Prep-Time (mins) is required.</div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="form-floating mb-3">
                     <!-- Cooking time (Mins) -->
-                    <input class="form-control" id="cook_time" name="cook_time" type="text" placeholder="Cook-Time (mins)" required/>
+                    <input class="form-control" id="cook_time" name="cook_time" type="text" 
+                    value="{{ recipe.cook_time }}" required/>
                     <label for="cook_time">Cook-Time (mins)</label>
                     <div class="invalid-feedback" data-sb-feedback="cookTimeMins:required">Cook-Time (mins) is required.</div>
                 </div>
@@ -65,13 +73,15 @@
         </div>
         <div class="form-floating mb-3">
             <!-- Ingredients With Quantities -->
-            <textarea class="form-control" id="ingredients" name="ingredients" type="text" placeholder="Ingredients With Quantities " style="height: 5rem;" data-sb-validations="required"></textarea>
+            <textarea class="form-control" id="ingredients" name="ingredients" type="text" 
+            style="height: 7rem;" required>{{ recipe.ingredients }}</textarea>
             <label for="ingredients">Ingredients With Quantities</label>
             <div class="invalid-feedback" data-sb-feedback="ingredientsWithQuantities:required">Ingredients With Quantities is required.</div>
         </div>
         <div class="form-floating mb-3">
             <!-- Cooking method -->
-            <textarea class="form-control" id="method" name="method" type="text" placeholder="Method" style="height: 10rem;" required></textarea>
+            <textarea class="form-control" id="method" name="method" type="text" 
+            style="height: 10rem;" required>{{ recipe.method }}</textarea>
             <label for="method">Method</label>
         </div>
         <div class="d-grid">

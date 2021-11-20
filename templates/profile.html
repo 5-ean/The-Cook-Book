@@ -3,21 +3,21 @@
 
 <header class="bg-primary bg-gradient text-white">
     <div class="container px-4 text-center">
-        <h1 class="fw-bolder">{{username}}'s profile</h1>
+        <h1 class="fw-bolder">{{ username }}'s Recipes</h1>
         <p class="lead">A functional Bootstrap 5 boilerplate for one page scrolling websites</p>
-        <a class="btn btn-lg btn-success" href="{{ url_for('add_recipe') }}">Add</a>
-        <a class="btn btn-lg btn-primary" href="#about">Edit</a>
-        <a class="btn btn-lg btn-danger" href="#about">Delect</a>
+        <a class="btn btn-lg btn-light" href="#about">Start scrolling!</a>
     </div>
 </header>
 
-
-<div class="container px-4">
-    <div class="row gx-4 justify-content-center">
+<div class="container">
+    <div class="row">
+        {% for recipe in my_recipes %}
         <div class="col-lg-8">
-            {% for recipe in recipes %}
             <h2>{{ recipe.recipe_name }}</h2>
             <p class="lead">{{ recipe.recipe_description }}</p>
+            <p class="lead">{{ recipe.method }}</p>
+        </div>
+        <div class="col">
             <ul>
                 <li>{{ recipe.cuisine_type }} style recipe</li>
                 <li>Difficulty : {{ recipe.recipe_difficulty }} </li>
@@ -25,8 +25,10 @@
                 <li>{{ recipe.cook_time }}</li>
                 <li>{{ recipe.ingredients }}</li>
             </ul>
-            {% endfor %}
+            <a class="btn btn-md btn-primary" href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">Edit</a>
+            <a class="btn btn-md btn-danger" href="#">Delect</a>
         </div>
+        {% endfor %}
     </div>
 </div>
 
