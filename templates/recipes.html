@@ -11,10 +11,11 @@
 
 <div class="container">
     <div class="row">
+        {% for recipe in recipes %}
         <div class="col-lg-8">
-            {% for recipe in recipes %}
             <h2>{{ recipe.recipe_name }}</h2>
             <p class="lead">{{ recipe.recipe_description }}</p>
+            <p class="lead">{{ recipe.method }}</p>
         </div>
         <div class="col">
             <ul>
@@ -26,8 +27,8 @@
             </ul>
             <a class="btn btn-md btn-success" href="#">Save</a>
             <a class="btn btn-md btn-primary" href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">Edit</a>
-            {% endfor %}
         </div>
+        {% endfor %}
     </div>
 </div>
 
