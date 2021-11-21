@@ -30,9 +30,9 @@
 > * Users of all platforms (mobile first design)
 
 **User Stories:**
-> 1. "As a user I want to be able to view many different recipes with ease"
+> 1. "As a new user I want to be able to view many different recipes with ease"
 >
-> 2. "As a user I want to add recipes onto the site myself, with the ablitly to edit or delete them if I choose"
+> 2. "As a registered user I want to add recipes onto the site myself, with the ablitly to edit or delete them if I choose"
 >
 > 3. "As a mobile user I want to have a moblie friendly experience; to cook whilee viewing recipes on my phone"
 >
@@ -40,28 +40,51 @@
 
 **Addressing User Stories**  
 > * User Story 1: Creating a frontend, multi page site that displays recipes store in a database. 
-> * User Story 2: Implymenting C,R,U,D and allowing users to POST & GET to a database.
+> * User Story 2: Implymenting C,R,U,D and allowing registered users to POST & GET to a database.
 > * User Story 3: Using Bootstrap 5 to design a moblie first site.
 > * User Story 4: Displaying the database information in a simplified way for user to engage with.
 
 **Project Database**
 > For this project I decide to use [MongoDB](https://www.mongodb.com/es). The reason behind this was that being a recipe database all the data is very self contained (non-relational data) with lots of documents that are not interconnect.
 
-> The Database 
-
-
-
-
+**The Database Structure :**
+>![image](static/ux_assets/ux_images/database.png)
+> The structure of the database is such that the recipes collection will hold almost all data that is injected into the front end site.
+> The users collection is going to allow site vistors to register, storing their username and password.
+> The cuisine type is a category that links multiple recipes together. This is utilies in the search function of the project.
 
 **Create, Read, Update & Delete** 
+> *For users to preform C.R.U.D operations on the database through the site they need to be registered.*
+>
+>**Create**
+![image](static/ux_assets/ux_images/add-recipe.png)
+>Users can add recipes through viva the **add recipes** page, allowing them to create a new recipe that will be stored in the MongoDB database
+>
+>**Read**
+![image](static/ux_assets/ux_images/recipes.png)
+>The **recipes** page displays all recipes in the cook_book database onto the front end page. *Note* Users cannot edit or delete from this page, even if they are a registered user.
+>
+>**Update**
+![image](static/ux_assets/ux_images/edit-recipe.png)
+>Users can edit their recipes viva the **edit recipes** page. It will be a very similar to the add recipes page in design.
+>
+>**Delete**
+>
+>The delete function on the site will be a button only registered users can access. There is no template for page for this C.R.U.D feature.
 
+**Types Of Users**
 
+>**New Users:**  Have no access to C.R.U.D operations, until they register on the **register here** page form.
+>![image](static/ux_assets/ux_images/register.png)
+>
+>**Registered Users:** Can create, edit and delete there own recipes, only after logging in viva the **login Page**.
+![image](static/ux_assets/ux_images/login.png)
 
 
 **Project Content** 
 >Within [Balsamiq](https://balsamiq.com/) a [table](https://github.com/5-ean/discover-new-zealand/blob/563bcd72d188b530b0f83b66682e1105c0e8078d/assets/ux_assets/images/content-table.pdf) of possible content was created to populate the project. A **wireframe site map** was then created to structure the content and project as a whole.
 >
-> The [Wireframe](https://github.com/5-ean/discover-new-zealand/blob/7f9d3df776b7bd97d4fdb0b2986230bd2601a7bd/assets/ux_assets/images/sitemap-wireframe.pdf) site map is a rough guide. Some content has been removed, specifically *(content)FAQ's*, *(content)videos* and *(content)links through to booking* because it lacks importance or is not viable at this time. 
+>The [Wireframe](https://github.com/5-ean/discover-new-zealand/blob/7f9d3df776b7bd97d4fdb0b2986230bd2601a7bd/assets/ux_assets/images/sitemap-wireframe.pdf) site map is a rough guide. Some content has been removed, specifically *(content)FAQ's*, *(content)videos* and *(content)links through to booking* because it lacks importance or is not viable at this time. 
  
 ### **SKELETON & SURFACE**
 
