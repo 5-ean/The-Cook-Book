@@ -165,11 +165,11 @@
 
 **Validating User Stories**
 > **Story 1 - ("As a new user I want to be able to view many different recipes with ease") :** 
-> * The recipes page will show all recipes in the databases. And Has a search function at the top to ease the process. I can add 10 recipes and they will all display to the user.
-
+> * The recipes page will show all recipes in the databases to the user. It has a search function at the top to help sort through recipes.
+>
 >**Story 2 - ("As a registered user I want to add recipes onto the site myself, with the ablitly to edit or delete them if I choose") :**
 > * From the profile template, a registered users can perform Create, Read, Update and Delete operations on the database.  
-
+>
 > **Story 3 - ("As a mobile user I want to have a moblie friendly experience; to cook while viewing recipes on my phone") :**
 > * The website has been tested on all mobile screen sizes within html inspector. It is responsive due to the use of bootstrap v5.1 as well as some stylings and custom classes for [Start-Bootstrap](https://startbootstrap.com/template/scrolling-nav). All site functions/links were tested on a OnePlus 3T mobile device and worked as expected.
 
@@ -182,6 +182,9 @@
 
 ### Form :
 > * All forms have the required attribute, aswell as invaild feeback hints if the input is not valid.
+> * Register form check :
+> * [Username registered](static/ux_assets/ux_images/wireframes/testing/register_userstory1.png)
+> * [Database contains Registered User](static/ux_assets/ux_images/wireframes/testing/register_userstory2.png)
 
 [**W3C Validator :**](https://validator.w3.org/)
 
@@ -225,8 +228,8 @@
 **Bugs & Fixes**
 
 >General - 
-> * Gitpod would switch ports for 5000 to 8080 regular, making me change my Heroku config a few times, still no fix found.
-> * Having an <a> element outside of a Jinja for-loop cause the project to crash.
+> * Gitpod would switch ports for 5000 to 8080 regularly, making me change my Heroku config a few times, still no fix found.
+> * Having an *a* element outside of a Jinja for-loop cause the project to crash.
 > * Bug with flash messages, will not disappear atfer being called.
 > * Display bug, footer moves up on ipad responsive viewing.
 ---
