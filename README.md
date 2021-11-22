@@ -34,7 +34,7 @@
 >
 > 2. "As a registered user I want to add recipes onto the site myself, with the ablitly to edit or delete them if I choose"
 >
-> 3. "As a mobile user I want to have a moblie friendly experience; to cook whilee viewing recipes on my phone"
+> 3. "As a mobile user I want to have a moblie friendly experience; to cook while viewing recipes on my phone"
 >
 > 4. "As a less technical user I want an easy to navigate website, over-complicated designs will put me off exploring the site. Which will keep me for recommending and returning to the website in the future."  
 
@@ -112,22 +112,30 @@
 >![Image](static/ux_assets/ux_images/wireframes/screenshots/register_html.png)
 >![Image](static/ux_assets/ux_images/wireframes/screenshots/registered_message.png)
 
-**Recipes.html -** 
-> * Provides the search functionality to quiry the database for all user types.
+**Recipes.html & Profile.html -** 
+> * Recipes.html allows unregistered user to quiry the database and acts as the landing page for the site.
+> * Profile.html has additional edit and delete buttons, for registered users only.
 > * Displays the database's collection of recipes.
 >
 >![Image](static/ux_assets/ux_images/wireframes/screenshots/recipes_html.png)
 >![Image](static/ux_assets/ux_images/wireframes/screenshots/recipes_mhtml.png)
->**Edit & Add_recipes -**
+>![Image](static/ux_assets/ux_images/wireframes/screenshots/profile_html.png)
+>![Image](static/ux_assets/ux_images/wireframes/screenshots/profile_mhtml.png)
+
+>**Edit & Add_recipes.html -**
 > * Giving registered users the ability to add and alter recipes viva a form. Using Jenja templating and Python to get and post to the Database
 > * The edit recipes form has prefill the inputs with the recipe inputs selected to edited. 
-> 
->![Image](docs/images/gallery.html.png)
->**Get In Touch Page / User Form submission -**
-> * Concise form with active feedback for the user.
-> * Allows them interaction between the Site operators and the users of said website.
 >
->![Image](docs/images/get_in_touch.html.png)
+>![Image](static/ux_assets/ux_images/wireframes/screenshots/add_recipe_html.png)
+>![Image](static/ux_assets/ux_images/wireframes/screenshots/add_recipe_mhtml.png)
+
+>**Log Out -**
+> * Clicking log out will end the users session, and return them to the log in template.
+>
+>![Image](static/ux_assets/ux_images/wireframes/screenshots/log_out_mhtml.png)
+
+>**Search Bar -**
+> * The search bar is a feature on both profile and recipes pages. Allowing users to quiry the database.
 
 ---
 # TECHNOLOGIES USED
@@ -143,32 +151,30 @@
 > * [GIT](https://git-scm.com/) : Git is a free and open source distributed version control system.
 > * [PYTHON](https://www.python.org/) : It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Used in this project to manipulate data from our database.
 > * [HEROKU](https://www.heroku.com/what) : Heroku is a cloud platform that lets companies build, deliver, monitor and scale apps.
-* [JINJA](https://www.heroku.com/what) : Heroku is a cloud platform that lets companies build, deliver, monitor and scale apps.
+>* [JINJA](https://jinja.palletsprojects.com/en/3.0.x/) : Jinja is a fast, expressive, extensible templating engine.
 ---
 # TESTING
 ---
 **Displey and Browser Testing**
 > * **Moblie View:** On small screen sizes(mobile) the content for each page is centralise. The header nav links collapses into a right-handed dropdown menu when interacted with.
 >
-> * The profile page was the 
-> * On the gallery page in small size sizes the captions underneath the bootstrap carousel images are hidden, along with in caption information accompanying the videos. 
+> * Across all pages the bootstrap class create nice spacing on space device up to large screens.
+> * The site was tested for responsivenss on A Oneplus 3T moblie device, Ipad mini table and various laptops. 
+ 
 
-![image](docs/images/screenshots/index-mobile.png) ![image](docs/images/screenshots/index-mobile-nav-active.png) ![image](docs/images/screenshots/about-mobile.png) ![image](docs/images/screenshots/gallery-mobile.png) ![image](docs/images/screenshots/get-in-touch-mobile.png)
 **Validating User Stories**
-> **Story 1 - ("Will it be easy to understand? Can I see topics that interest me quickly....") :** 
->The bulk of the site information is found on one html page (about), It is a summary of three general topic that should interest most users. If they require more information the button “Learn More” will open a new tab to the Wikipedia article the specific topic is referencing.
+> **Story 1 - ("As a new user I want to be able to view many different recipes with ease") :** 
+> * The recipes page will show all recipes in the databases. And Has a search function at the top to ease the process.
 
->**Story 2 - (As a mobile dependent user of this website, I want to have a polished and engaging experience...") :**
->The website has been tested on all mobile screen sizes within html inspector. It is responsive due to the use of bootstrap. All site functions/links were tested on a OnePlus 3T mobile device and worked as expected.
+>**Story 2 - ("As a registered user I want to add recipes onto the site myself, with the ablitly to edit or delete them if I choose") :**
+> * From the profile template, a registered users can perform Create, Read, Update and Delete operations on the database.  
 
-> **Story 3 - ("As a visual user of the website, I want high quality media displayed on the site for my viewing pleasure...") :**
->The gallery page contains high quality images and videos of New Zealand with accompanying information on larger device sizes, on small mobile devices the page just contains images and video and minimal text. 
+> **Story 3 - ("As a mobile user I want to have a moblie friendly experience; to cook while viewing recipes on my phone") :**
+>The website has been tested on all mobile screen sizes within html inspector. It is responsive due to the use of bootstrap v5.1 as well as some stylings and custom classes for [Start-Bootstrap](https://startbootstrap.com/template/scrolling-nav). All site functions/links were tested on a OnePlus 3T mobile device and worked as expected.
 
->**Story 4 - ("...I want to send questions if I require more information….is their reciprocation? Can you send me additional information at my request?") :**
->Users can complete a form found in the footer (contact us link) or in the ‘get in touch page’. It contains space to send a question, along with other basic information fields. The form needs to be completed in full in order for the Form Submitted message to appear. 
+>**Story 4 - ("As a less technical user I want an easy to navigate website, over-complicated designs will put me off...") :**
+> The site follows clear and logical progression, with links and interactive elements all sharing similar stylings. The content is laid out with a western target audience in mind (reading left to right) and this is reflected in the information layout of the nav header, footer and main pages of the website. With Most important on the left to least important on the right. All feature and link are accessible within two mouse clicks of entering the site.
 
->**Story 5 - ("As a less technical user I want an easy to navigate website, over-complicated designs will put me off...") :**
-> The site follows clear and logical progression, with links and interactive elements all sharing similar stylings. The content is laid out with a western target audience in mind (reading left to right) and this is reflected in the information layout of the nav header, footer and main pages of the website. With Most important on the left to least important on the right. All feature and link are accessible within three mouse clicks of entering the site.
 ### Links :
 > * All social links tested and open in seperate windows.
 > * All internal navigation links tested and lead to described locations within same browser window.
@@ -181,32 +187,29 @@
 
 [**W3C Validator :**](https://validator.w3.org/)
 
-> * **base.html -** ![Image](docs/images/testing-images/index.html-w3c-validator.png)
+> * Due to Jinja templating I got errors on my validation, the first pass I removed type="text" for textarea elements and closed unpaired div. Leaving only error caused by Jinja, at this time I do not know how to fix this issue.
+>
+> * **All html pages (most are duplicates, with slight chances)** 
+![Image](static/ux_assets/ux_images/wireframes/testing/get_recipes_test.png)
+![Image](static/ux_assets/ux_images/wireframes/testing/get_recipes_test_two.png)
+![Image](static/ux_assets/ux_images/wireframes/testing/profile_test.png)
+![Image](static/ux_assets/ux_images/wireframes/testing/recipes_test.png)
+![Image](static/ux_assets/ux_images/wireframes/testing/register_test.png)
 
-> * **recipes.html -** ![Image](docs/images/testing-images/about.html-w3c-validator.png)
 
-> * **register.html -** ![Image](docs/images/testing-images/gallery.html-w3c-validator.png) 
-
-> * **profile.html -** ![Image](docs/images/testing-images/get-in-touch.html-w3c-validator.png)
-
-> * **login.html -** ![Image](docs/images/testing-images/get-in-touch.html-w3c-validator.png)
-
-> * **edit_recipe.html -** ![Image](docs/images/testing-images/get-in-touch.html-w3c-validator.png)
-
-> * **add_recipe.html -** ![Image](docs/images/testing-images/get-in-touch.html-w3c-validator.png)
 
 [**CSS Validator :**](https://jigsaw.w3.org/css-validator/)
 
-> * **style.css -** ![Image](docs/images/testing-images/style.css-jigsaw-validator.png)
+> * **style.css -** ![Image](static/ux_assets/ux_images/wireframes/testing/css_validation.png)
 
 [**Python Validator :**](http://pep8online.com/)
 
-> * **appp.py -** ![Image](docs/images/testing-images/style.css-jigsaw-validator.png)
+> * **app.py -** ![Image](static/ux_assets/ux_images/wireframes/testing/python_validation.png)
 
 [**Google Lighthouse :**](https://developers.google.com/web/tools/lighthouse/) (Can be launched viva the inspect browser window, far right of the top tab within the dropdown menu)
->Home Page - 
+>recipes.html - 
 > * [Mobile Test](docs/images/lighthouse-images/index-mobile.pdf)
-> * [Desktop Test](docs/images/lighthouse-images/index-desktop.pdf)
+> * [Desktop Test](static/ux_assets/ux_images/wireframes/testing/lighthouse/recipes_dt.pdf)
 >
 >About Page - 
 > * [Mobile Test](docs/images/lighthouse-images/about-mobile.pdf)
@@ -224,15 +227,9 @@
 **Bugs & Fixes**
 
 >General - 
-> * Text sizing issue within nav and footer sections. Had to use media queries based on veiwport width to adjust at different breakpoints. This resized the text so it wasn't so large on smaller devices.
-> * I could not give my hero-image class (Website background) an alt attribute. Still not resolved, this will have to be a future fix. It affects accessibility on all pages.
-> * Container-fluid class margin L + R auto causes issues in md, lg and larger screen sizes. The width is not being used effectively. Not fixed at this time, but site is still viewable on all devices.
-
->About Page: Learn More Button - 
-> * Originally an < a > link nested inside a button element, this is invalid by w3c standards. Link leads to relevant wikipedia source page. Fixed using solution from stack overflow. Onclick="window.open(...) allowed me to remove < a > element and keep button element inplace.
-
->Get In Touch Page: Form - 
-> * On page opening invalid feedback is present, ideally the form would be neutral until interacted with by the user. No Fixed at this time, due to complexity and lack of understanding on my part, will be revisited. 
+> * Gitpod would switch ports for 5000 to 8080 regular, making me change my Heroku config a few times, still no fix found.
+> * Having an <a> element outside of a Jinja for-loop cause the project to crash.
+> * Bug with flash messages, will not disappear atfer being called.
 ---
 # DEPLOYMENT
 ---
