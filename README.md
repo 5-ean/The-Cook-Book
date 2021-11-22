@@ -1,8 +1,8 @@
 # **The Cook Book** 
-[Live Site Link](https://5-ean.github.io/discover-new-zealand/index.html)
+[Live Site Link](https://cook-book-project1.herokuapp.com/)
 
 >
-> ![Image](docs/images/mock-up.png)
+> ![Image](static/ux_assets/ux_images/wireframes/screenshots/mock_up.png)
 >
 ---
 # INTRODUCTION
@@ -22,7 +22,7 @@
 ---
 ### **STRATEGY, SCOPE & STRUCTURE**
 **Business Objective:**
->For this Project no business objectives were set at present. Future features could include ad intregration, sales of top recipes compiled into book form.  
+>For this Project no business objectives are set at present. Future features could include ad intregration, sales of top recipes compiled into paper recipe books.  
 
 **Target User:** 
 > * Users that want to view a collection of different recipes
@@ -159,8 +159,8 @@
 **Displey and Browser Testing**
 > * **Moblie View:** On small screen sizes(mobile) the content for each page is centralise. The header nav links collapses into a right-handed dropdown menu when interacted with.
 >
-> * Across all pages the bootstrap class create nice spacing on space device up to large screens.
-> * The site was tested for responsivenss on A Oneplus 3T moblie device, Ipad mini table and various laptops. 
+> * Across all pages the bootstrap class create nice spacing on small device up to large screens.
+> * The site was tested for responsivenss on a Oneplus 3T moblie device, Ipad mini tablet and various laptops. 
  
 
 **Validating User Stories**
@@ -188,12 +188,12 @@
 > * Due to Jinja templating I got errors on my validation, the first pass I removed type="text" for textarea elements and closed unpaired div. Leaving only error caused by Jinja, at this time I do not know how to fix this issue.
 >
 > * **All html pages (most are duplicates, with slight chances)** 
-![Image](static/ux_assets/ux_images/wireframes/testing/get_recipes_test.png)
-![Image](static/ux_assets/ux_images/wireframes/testing/get_recipes_test_two.png)
-![Image](static/ux_assets/ux_images/wireframes/testing/profile_test.png)
-![Image](static/ux_assets/ux_images/wireframes/testing/recipes_test.png)
-![Image](static/ux_assets/ux_images/wireframes/testing/register_test.png)
-
+>![Image](static/ux_assets/ux_images/wireframes/testing/get_recipes_test.png)
+>![Image](static/ux_assets/ux_images/wireframes/testing/get_recipes_test_two.png)
+>![Image](static/ux_assets/ux_images/wireframes/testing/profile_test.png)
+>![Image](static/ux_assets/ux_images/wireframes/testing/recipes_test.png)
+>![Image](static/ux_assets/ux_images/wireframes/testing/register_test.png)
+>
 
 
 [**CSS Validator :**](https://jigsaw.w3.org/css-validator/)
@@ -205,22 +205,22 @@
 > * **app.py -** ![Image](static/ux_assets/ux_images/wireframes/testing/python_validation.png)
 
 [**Google Lighthouse :**](https://developers.google.com/web/tools/lighthouse/) (Can be launched viva the inspect browser window, far right of the top tab within the dropdown menu)
->recipes.html - 
-> * [Mobile Test](docs/images/lighthouse-images/index-mobile.pdf)
+> **recipes.html -** 
+> * [Mobile Test](static/ux_assets/ux_images/wireframes/testing/lighthouse/recipes_m.pdf)
 > * [Desktop Test](static/ux_assets/ux_images/wireframes/testing/lighthouse/recipes_dt.pdf)
 >
->About Page - 
-> * [Mobile Test](docs/images/lighthouse-images/about-mobile.pdf)
-> * [Desktop Test](docs/images/lighthouse-images/about-desktop.pdf)
+> **profile.html -** 
+> * [Mobile Test](static/ux_assets/ux_images/wireframes/testing/lighthouse/profile_m.pdf)
+> * [Desktop Test](static/ux_assets/ux_images/wireframes/testing/lighthouse/profile_dt.pdf)
 >
->Gallery Page - 
-> * [Mobile Test](docs/images/lighthouse-images/gallery-mobile.pdf)
-> * [Desktop Test](docs/images/lighthouse-images/gallery-desktop.pdf)
-> * Notes - Images used for the bootstrap carousel are large in size (even after compression) on mobile device, resulting in a drop in performance rating.
+> **add_recipes.html -** 
+> * [Mobile Test](static/ux_assets/ux_images/wireframes/testing/lighthouse/add_m.pdf)
+> * [Desktop Test](static/ux_assets/ux_images/wireframes/testing/lighthouse/add_dt.pdf)
+> * 
 >
->Get In Touch Page - 
-> * [Mobile Test](docs/images/lighthouse-images/get-in-touch-mobile.pdf)
-> * [Desktop Test](docs/images/lighthouse-images/get-in-touch-desktop.pdf)
+> **login.html -** 
+> * [Mobile Test](static/ux_assets/ux_images/wireframes/testing/lighthouse/login_m.pdf)
+> * [Desktop Test](static/ux_assets/ux_images/wireframes/testing/lighthouse/login_dt.pdf)
 
 **Bugs & Fixes**
 
@@ -228,10 +228,10 @@
 > * Gitpod would switch ports for 5000 to 8080 regular, making me change my Heroku config a few times, still no fix found.
 > * Having an <a> element outside of a Jinja for-loop cause the project to crash.
 > * Bug with flash messages, will not disappear atfer being called.
+> * Display bug, footer moves up on ipad responsive viewing.
 ---
 # DEPLOYMENT
 ---
-
 
 **Forking the GitHub Repository**
 >
@@ -277,7 +277,7 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 > 3. Set up environment variables
 > * Navigate to "settings" page.
 > * Click "Revel Config Vars" button
-> * The input should match the display below.
+> * The input should match the display below...
 
 ```
 import os
@@ -292,6 +292,21 @@ os.environ.setdefault("MONGO_DBNAME", "<database_name")
 > * On "Automatic Deploys" section, from our master/main branch click on "Enable Automatic Deployment".
 > * Heroku can now receive up to date code from Github and start building the app.
 > * When you see "Your app was successfully deployed." the process is complete, you can now view your deployed app by seleting "View App"
+
+**Creating a MongoDB database**
+
+> 1. login/ create account on mongoDB.
+> 2. Create cluster look for the "Shared Cluster" button
+> * Select your chosen cloud provider.
+> * Select closest region. 
+> * select cluster tier M0.
+> * Name your cluster.
+> * Click "Create Cluster" button.
+> 3. Under Security section on the left.
+> * Click "Add New Database User" --> create username and password
+> * "Database User Privileges" = Read and write to any database
+> * Click "Add user"
+> 4. Within "Network Access", click --> "Add IP Address", select --> "Allow Access from Anywhere", click --> Confirm 
 
 # CREDITS
 ---
