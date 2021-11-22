@@ -1,12 +1,17 @@
 @charset "UTF-8";
 
+/* Top page elements, html and body */
 html {
   scroll-padding-top: 3.5rem;
 }
 
 header {
-  padding-top: 6rem;
-  padding-bottom: 3rem;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+#navbar-brand {
+  font-size: 4.2vw;
 }
 
 body {
@@ -18,6 +23,46 @@ section {
   padding-bottom: 9rem;
   background-color: lavenderblush;
 }
+
+ul.list {
+  padding-top: 40px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  margin: 10px 5px 3px;
+}
+
+.list li {
+  padding: 1.5px;
+  margin: auto;
+  line-height: normal;
+  background-color: white;
+  list-style-type: none;
+}
+
+/* text and content styling */
+h1 {
+  padding: 5px;
+  margin: 4px 8px;
+  font-weight: bold;
+}
+
+h2 {
+  padding: 5px;
+  margin: 5px 4px 10px;
+  font-weight: bold;
+}
+
+p.lead {
+  padding: 5px;
+  margin: 5px 4px 5px;
+  background-color: white;
+  border: 2px solid whitesmoke;
+  border-radius: .25rem;
+  font-weight: 400;
+}
+
+/* Flash messages styling */
 
 section#flash-messages {
    position: absolute;
@@ -33,21 +78,26 @@ section#flash-messages {
 
 .flashes h4 {
   line-height: 2;
-  background-color: #4cc6df
+  background-color: lavender;
+  border-radius: .25rem;
 }
 
-.btn-md {
-  margin: 5px
+
+/* Button, input and search bar */
+
+a.btn-md {
+  margin: 5px;  
 }
 
 #submitbtn, #cancelbtn {
   text-align: center;
 }
-
-footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 25px;
-  width: 100%;    
+/* re = recipe enquiry search bar */
+#re {
+  border-radius: .25rem;
 }
+/* u-r-e = user recipe enquiry search bar */
+#u-r-e {
+  border-radius: .25rem;
+}
+

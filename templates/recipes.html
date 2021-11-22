@@ -4,12 +4,12 @@
 <header class="bg-primary bg-gradient text-white">
     <div class="container px-4 text-center">
         <h1 class="fw-bolder">Recipes</h1>
-        <p class="lead">A functional Bootstrap 5 boilerplate for one page scrolling websites</p>
+        <p>From here you can search all the recipes created by our users.....it's a really big cook book!</p>
         <form action="{{ url_for('search') }}" method="POST">
             <div class="center-align">
                 <div class="col s12 m8">
                     <i class="fas fa-search"></i>
-                    <input type="text" name="query" id="query" placeholder="Search Recipes" minlength="3" required>
+                    <input type="text" name="query" id="re" placeholder="Search Recipes" minlength="3" required>
                     <label for="query"></label>
                 </div>
             </div>
@@ -23,15 +23,15 @@
         <div class="col-lg-8">
             <h2>{{ recipe.recipe_name }}</h2>
             <p class="lead">{{ recipe.recipe_description }}</p>
-            <p class="lead">{{ recipe.method }}</p>
+            <p class="lead"><strong>Method</strong><br>{{ recipe.method }}</p>
         </div>
-        <div class="col">
-            <ul>
+        <div class="col text-center">
+            <ul class="list">
                 <li>{{ recipe.cuisine_type }} style recipe</li>
                 <li>Difficulty : {{ recipe.recipe_difficulty }} </li>
-                <li>{{ recipe.prep_time }}</li>
-                <li>{{ recipe.cook_time }}</li>
-                <li>{{ recipe.ingredients }}</li>
+                <li>Prep Time : {{ recipe.prep_time }}</li>
+                <li>Cook Time : {{ recipe.cook_time }}</li>
+                <li><strong>Ingredients</strong><br>{{ recipe.ingredients }}</li>
             </ul>
         </div>
         {% endfor %}

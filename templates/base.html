@@ -38,12 +38,15 @@
                     class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
+                    <!-- Link avaliable to all users -->
                     <li class="nav-item"><a class="nav-link" href="{{ url_for('recipes') }}">Home</a></li>
                     {% if session.user %}
+                    <!--  Link only for registered users -->
                         <li class="nav-item"><a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">My Profile</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ url_for('logout') }}">logout</a></li>
                     {% else %}
+                    <!-- Links for unregisterd(new) users -->
                         <li class="nav-item"><a class="nav-link" href="{{ url_for('register') }}">Register Here</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ url_for('login') }}">Login</a></li>
                     {% endif %}
@@ -60,7 +63,7 @@
     <!-- Footer-->
     <footer class="py-5 bg-dark">
         <div class="container px-4">
-            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2021</p>
+            <p class="m-0 text-center text-white">5-ean &copy; The Cook Book 2021</p>
         </div>
     </footer>
     <!-- jquery -->
