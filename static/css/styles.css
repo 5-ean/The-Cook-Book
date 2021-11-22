@@ -3,6 +3,7 @@
 /* Top page elements, html and body */
 html {
   scroll-padding-top: 3.5rem;
+  height: 100vh;
 }
 
 header {
