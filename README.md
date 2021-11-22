@@ -136,6 +136,7 @@
 
 >**Search Bar -**
 > * The search bar is a feature on both profile and recipes pages. Allowing users to quiry the database.
+> The function searchs through recipe names and cuisine types to deliver a fast accruate match
 
 ---
 # TECHNOLOGIES USED
@@ -164,26 +165,23 @@
 
 **Validating User Stories**
 > **Story 1 - ("As a new user I want to be able to view many different recipes with ease") :** 
-> * The recipes page will show all recipes in the databases. And Has a search function at the top to ease the process.
+> * The recipes page will show all recipes in the databases. And Has a search function at the top to ease the process. I can add 10 recipes and they will all display to the user.
 
 >**Story 2 - ("As a registered user I want to add recipes onto the site myself, with the ablitly to edit or delete them if I choose") :**
 > * From the profile template, a registered users can perform Create, Read, Update and Delete operations on the database.  
 
 > **Story 3 - ("As a mobile user I want to have a moblie friendly experience; to cook while viewing recipes on my phone") :**
->The website has been tested on all mobile screen sizes within html inspector. It is responsive due to the use of bootstrap v5.1 as well as some stylings and custom classes for [Start-Bootstrap](https://startbootstrap.com/template/scrolling-nav). All site functions/links were tested on a OnePlus 3T mobile device and worked as expected.
+> * The website has been tested on all mobile screen sizes within html inspector. It is responsive due to the use of bootstrap v5.1 as well as some stylings and custom classes for [Start-Bootstrap](https://startbootstrap.com/template/scrolling-nav). All site functions/links were tested on a OnePlus 3T mobile device and worked as expected.
 
 >**Story 4 - ("As a less technical user I want an easy to navigate website, over-complicated designs will put me off...") :**
 > The site follows clear and logical progression, with links and interactive elements all sharing similar stylings. The content is laid out with a western target audience in mind (reading left to right) and this is reflected in the information layout of the nav header, footer and main pages of the website. With Most important on the left to least important on the right. All feature and link are accessible within two mouse clicks of entering the site.
 
 ### Links :
-> * All social links tested and open in seperate windows.
 > * All internal navigation links tested and lead to described locations within same browser window.
-> * All pindrop google map links (gallery.html- carousel caption area) tested, open in new window and correspond to image displayed on website.
+> * All connection between mongoDB, Heroku and gitpod tested by adding one recipe document to the recipes collect in MongoDB. It was passed to the site and displayed.   
 
 ### Form :
-> * Can not submit form without all inputs fields being filled in. Valid and invalid feedback helps users achieve goal.
-> * Must enter valid email into form.
-> * If all input fields are filled and valid the form will run a modal pop up with the message *Form submited*
+> * All forms have the required attribute, aswell as invaild feeback hints if the input is not valid.
 
 [**W3C Validator :**](https://validator.w3.org/)
 
