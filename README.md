@@ -48,7 +48,7 @@
 > For this project I decide to use [MongoDB](https://www.mongodb.com/es). The reason behind this was that being a recipe database all the data is very self contained (non-relational data) with lots of documents that are not interconnect.
 
 **The Database Structure :**
->![image](static/ux_assets/ux_images/database.png)
+>![image](static/ux_assets/ux_images/wireframes/database.png)
 > The structure of the database is such that the recipes collection will hold almost all data that is injected into the front end site.
 > The users collection is going to allow site vistors to register, storing their username and password.
 > The cuisine type is a category that links multiple recipes together. This is utilies in the search function of the project.
@@ -65,7 +65,7 @@
 >The **recipes** page displays all recipes in the cook_book database onto the front end page. *Note* Users cannot edit or delete from this page, even if they are a registered user.
 >
 >**Update**
-![image](static/ux_assets/ux_images/edit-recipe.png)
+![image](static/ux_assets/ux_images/wireframes/edit-recipe.png)
 >Users can edit their recipes viva the **edit recipes** page. It will be a very similar to the add recipes page in design.
 >
 >**Delete**
@@ -75,48 +75,52 @@
 **Types Of Users**
 
 >**New Users:**  Have no access to C.R.U.D operations, until they register on the **register here** page form.
->![image](static/ux_assets/ux_images/register.png)
+>![image](static/ux_assets/ux_images/wireframes/register.png)
 >
 >**Registered Users:** Can create, edit and delete there own recipes, only after logging in viva the **login Page**.
-![image](static/ux_assets/ux_images/login.png)
+![image](static/ux_assets/ux_images/wireframes/login.png)
 
 
 ### **SKELETON & SURFACE**
 
 **Colour Scheme & Background**
-> The site is minimal in colours, this is to not distract from the data. inspiration 
+> The site is minimal in colours, this is to not distract from the data. Inspiration is taken from coding documentation sites. Bright colours are include in the header and positive action buttons e.g submit buttons to give the page some colour contrast. The main nav and footer are both black to give the site a sleek look. The delete button is red to warm the use of this action.
 >
->   *Navigation background colour*
-> * Hex  (#cfcccc)
+>   *Header & Submit Button Colour :*
+> * Bootstrap Primary - #0D6EFD
 >
->  *Footer background colours:*
-> * rgba(185, 185, 185, 0.5)
+>  *Section/Background colour :*
+> * lavenderblush - #FFF0F5 
+>
+>  *Footer background & Navbar colour :*
+> * #212529
 >  
->  *Content background colour:*
-> * rgba(255, 255, 255, 0.5 - 0.7)
+>  *Delete Button colour :*
+> * Bootstrap Danger - DC3545
 
-**Buttons & Links**
-
->To aid usability links and buttons followed the same style. Notably changing from black to white when hovered over. This is a sharp contrast and a nod to New Zealand Sports and Culture as white and black have long been the colour scheme for the country in many regards.
 
 ---
 # FEATURES
 ---
->**Home Page / Navigation & Footer Elements -**
-> * Simple, easy to understand layout with user feedback on all links both internal and external.
-> * Bootstrap based navigation header, with collapse function in mobile view.
-> * Social links in footer element, along with copywrite information.
-> * Short introduction text to info user of the goal of the site.
+>**Register --> Login (User Journey) -**
+> * A set up to guard our database from unregistered users.
+> * The recipes database can only be interactive with after the user has registered.
+> * Registereed users have the ability to add, edit and delete recipes.
+> * Users enters username & password to register -->
+>Registration successful redirected to profile.html --> User can now edit and delete recipes. 
 >
->![Image](docs/images/index.html.png)
-**About Page / Information Content -** 
-> * A section containing  condensed information about New Zealand.  
-> * Links within the section that will take user to the source material.
+>![Image](static/ux_assets/ux_images/wireframes/screenshots/register_html.png)
+>![Image](static/ux_assets/ux_images/wireframes/screenshots/registered_message.png)
+
+**Recipes.html -** 
+> * Provides the search functionality to quiry the database for all user types.
+> * Displays the database's collection of recipes.
 >
->![Image](docs/images/about.html.png)
->**Gallery Page / Google Maps Location Links -**
-> * Multiple images of New Zealand.
-> * Additional information provided on pictures from captions underneath. 
+>![Image](static/ux_assets/ux_images/wireframes/screenshots/recipes_html.png)
+>![Image](static/ux_assets/ux_images/wireframes/screenshots/recipes_mhtml.png)
+>**Edit & Add_recipes -**
+> * Giving registered users the ability to add and alter recipes viva a form. Using Jenja templating and Python to get and post to the Database
+> * The edit recipes form has prefill the inputs with the recipe inputs selected to edited. 
 > 
 >![Image](docs/images/gallery.html.png)
 >**Get In Touch Page / User Form submission -**
@@ -139,6 +143,7 @@
 > * [GIT](https://git-scm.com/) : Git is a free and open source distributed version control system.
 > * [PYTHON](https://www.python.org/) : It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Used in this project to manipulate data from our database.
 > * [HEROKU](https://www.heroku.com/what) : Heroku is a cloud platform that lets companies build, deliver, monitor and scale apps.
+* [JINJA](https://www.heroku.com/what) : Heroku is a cloud platform that lets companies build, deliver, monitor and scale apps.
 ---
 # TESTING
 ---
@@ -231,29 +236,68 @@
 ---
 # DEPLOYMENT
 ---
-**How Do I Create A Project :**
-> 1. Sign on to github/create a new account.
-> 2. Select New Repository.
-> 3. Name the repository and click the green button.
-> 4. You will be taken to gidpod where you can start coding.
 
-**How I Deploy The Project To GitHub :**
-> 1. Log on to [GitHub](https://github.com/), clicked the repository named [discover-new-zealand](https://github.com/5-ean/discover-new-zealand).
-> 2. Select the settings tab and scroll to the section headed GitHub Pages.
-> 3. In the sub-heading of Source, select the master branch and then save.
-> 4. The site is now deployed and a live [link](https://5-ean.github.io/discover-new-zealand/) is given.
 
-**How Do I Fork The Repository :**
-> 1. Go to the discover-new-zealand repository.
-> 2. Click Fork button in the very top right corner of the browser.
-> 3. This creates a copy.
-> 4. You can now click pull request and within the dropdown select New Pull Request.
+**Forking the GitHub Repository**
+>
+>By forking the GitHub Repository we make a copy of the original repository on >our GitHub account to view and/or make changes without affecting the original >repository by using the following steps...
+>
+>1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+>2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+>3. You should now have a copy of the original repository in your GitHub account.
+>
+**Making a Local Clone**
+>
+>1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+>2. Under the repository name, click "Clone or download".
+>3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+>4. Open Git Bash
+>5. Change the current working directory to the location where you want the cloned directory to be made.
+>6. Type `git clone`, and then paste the URL you copied in Step 3.
+```
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+```
 
-**How To Deploy Locally :**
-> 1. Log on to [GitHub](https://github.com/), clicked the repository named [discover-new-zealand](https://github.com/5-ean/discover-new-zealand).
-> 2. Select the dropdown tab "Code" and choose Download ZIP.
-> 3. Un-zip files and it's ready to use on your local environment.
----
+>7. Press Enter. Your local clone will be created.
+
+```
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+> Cloning into `CI-Clone`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
+```
+**Deployment to Heroku**
+
+>For this project I connected to Github Repository to deploy my Heroku app, but you can also use the Heroku CLI. This is how you can deploy my project using Heroku.
+
+> 1. Create App.
+> 2. Connect Our App to Github
+>
+> * In Heroku app dashboard, navigate to the Deploy page. On the Deployment Method, click "Github".
+> * Click on "Connect to Github" button.
+> * Fill in the name of your Github repository name and click on "Search".
+> * After it found the correct repository, click on "Connect".
+> 3. Set up environment variables
+> * Navigate to "settings" page.
+> * Click "Revel Config Vars" button
+> * The input should match the display below.
+
+```
+import os
+
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("PORT", 8080")
+os.environ.setdefault("SECRET_KEY", <your_secret_key")
+os.environ.setdefault("MONGO_URI", "mongodb+srv://<username>:<password>@<cluster_name>-ocous.mongodb.net/<database_name>?retryWrites=true&w=majority")
+os.environ.setdefault("MONGO_DBNAME", "<database_name")
+```
+> 4. Automatic Deployment
+> * On "Automatic Deploys" section, from our master/main branch click on "Enable Automatic Deployment".
+> * Heroku can now receive up to date code from Github and start building the app.
+> * When you see "Your app was successfully deployed." the process is complete, you can now view your deployed app by seleting "View App"
+
 # CREDITS
 ---
 **Hints/Tips/Documentation**
