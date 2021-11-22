@@ -57,11 +57,11 @@
 > *For users to preform C.R.U.D operations on the database through the site they need to be registered.*
 >
 >**Create**
-![image](static/ux_assets/ux_images/add-recipe.png)
+![image](static/ux_assets/ux_images/wireframes/add-recipe.png)
 >Users can add recipes through viva the **add recipes** page, allowing them to create a new recipe that will be stored in the MongoDB database
 >
 >**Read**
-![image](static/ux_assets/ux_images/recipes.png)
+![image](static/ux_assets/ux_images/wireframes/recipes.png)
 >The **recipes** page displays all recipes in the cook_book database onto the front end page. *Note* Users cannot edit or delete from this page, even if they are a registered user.
 >
 >**Update**
@@ -70,7 +70,7 @@
 >
 >**Delete**
 >
->The delete function on the site will be a button only registered users can access. There is no template for page for this C.R.U.D feature.
+>The delete function on the site will be a button only registered users can interact with. There is no template for this C.R.U.D feature.
 
 **Types Of Users**
 
@@ -81,17 +81,10 @@
 ![image](static/ux_assets/ux_images/login.png)
 
 
-**Project Content** 
->Within [Balsamiq](https://balsamiq.com/) a [table](https://github.com/5-ean/discover-new-zealand/blob/563bcd72d188b530b0f83b66682e1105c0e8078d/assets/ux_assets/images/content-table.pdf) of possible content was created to populate the project. A **wireframe site map** was then created to structure the content and project as a whole.
->
->The [Wireframe](https://github.com/5-ean/discover-new-zealand/blob/7f9d3df776b7bd97d4fdb0b2986230bd2601a7bd/assets/ux_assets/images/sitemap-wireframe.pdf) site map is a rough guide. Some content has been removed, specifically *(content)FAQ's*, *(content)videos* and *(content)links through to booking* because it lacks importance or is not viable at this time. 
- 
 ### **SKELETON & SURFACE**
 
->The remaining features and content kept in make up the **minimal viable product** at this time. The **MVP** *(minimal viable product)* consists of the [Home](https://github.com/5-ean/discover-new-zealand/blob/7f9d3df776b7bd97d4fdb0b2986230bd2601a7bd/assets/ux_assets/images/index.html-wireframe.pdf) page, [About](https://github.com/5-ean/discover-new-zealand/blob/7f9d3df776b7bd97d4fdb0b2986230bd2601a7bd/assets/ux_assets/images/about.html-wireframe.pdf), [Gallery](https://github.com/5-ean/discover-new-zealand/blob/7f9d3df776b7bd97d4fdb0b2986230bd2601a7bd/assets/ux_assets/images/gallery.html-wireframe.pdf) & [Get In Touch](https://github.com/5-ean/discover-new-zealand/blob/7f9d3df776b7bd97d4fdb0b2986230bd2601a7bd/assets/ux_assets/images/get-in-touch.html-wireframe.pdf) pages respectively.
-
 **Colour Scheme & Background**
-> The pictures used for the project were of natural landscapes with high ratios of green, blue, white, and brown colouring. Therefore, the stylistic choice was to use off white/grey colouring with opacity for the footer element. The Header was a solid grey colour to block content scrolling under as the user move the page up. The colour scheme along with subtle, thin borders around content elements gave a natural feel to the site overall.
+> The site is minimal in colours, this is to not distract from the data. inspiration 
 >
 >   *Navigation background colour*
 > * Hex  (#cfcccc)
@@ -132,36 +125,27 @@
 >
 >![Image](docs/images/get_in_touch.html.png)
 
-## **Existing Feature**
-> * **Header Navigation :**  Allows the user to navigate through the sites four pages.
-> * **Footer Section :** 
-> 1. Contact Us - A link to a pop up modal that contains the form for getting in touch. 
-> 2. Copywrite -  A small static element displaying the site creator and year of implementation.
-> 3. Social Media - Multiple links throught to big social media site.
->* **About page :** Bootstrap cards with relevant images, information and links through to Wikipedia source material.
-> * **Gallery page :** Contains pictures and videos of New Zealand. With accompanying text describing location (on large and medium devices)
-> * **Get In Touch page :** A form set up to give the site operator more information about the users of the site to help with targeting. And a way for the users to give feedback, express ideas and enquiry about the site/ content presented on it. 
 ---
 # TECHNOLOGIES USED
 ---
 > * [HTML5](https://html.com/html5/) : The markup language used for structuring and presenting content on the Discover New Zealand website.
 > * [CSS3](https://html.com/css/) : The language that defines the presentation of a website Discover New Zealand.
-> * [BOOTSTRAP V4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/) : Used in the project to create a mobile-first designed website. It is the most popular front-end open source toolkit.
+> * [BOOTSTRAP V5.1](https://getbootstrap.com/) : Used in the project to create a mobile-first designed website. It is the most popular front-end open source toolkit.
 > * [FONT AWESOME](https://fontawesome.com/) : Used in the project to provide vector icons and social media logos.
-> * [GOOGLE FONTS](https://fonts.google.com/) : Provided typography to the project. It is a robust collection of open source designer web fonts.
 > * [MongoDB](https://www.mongodb.com/es) : An application data platform built on a database. The core component of this project.
 > * [BALSAMIQ](https://balsamiq.com/) : Used to create a table and multiple wireframes for the project. Licence provided by [Code Institute](https://codeinstitute.net/).
 > * [GITPOD](https://www.gitpod.io/) : The interaction development environment (IDE) used to write the projects code.
 > * [GITHUB](https://github.com/) : Provides hosting for software development version control using Git. The host of this project.
 > * [GIT](https://git-scm.com/) : Git is a free and open source distributed version control system.
+> * [PYTHON](https://www.python.org/) : It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Used in this project to manipulate data from our database.
+> * [HEROKU](https://www.heroku.com/what) : Heroku is a cloud platform that lets companies build, deliver, monitor and scale apps.
 ---
 # TESTING
 ---
 **Displey and Browser Testing**
-> * **Moblie View:** On small screen sizes(mobile) the content for each page is centralise. The header nav links collapses into a right-handed dropdown menu when interacted with. The footer only displays the social links and contact us modal link.
+> * **Moblie View:** On small screen sizes(mobile) the content for each page is centralise. The header nav links collapses into a right-handed dropdown menu when interacted with.
 >
-> * The about page which was three columns on large screen sizes now switches to display the content vertically. 
->
+> * The profile page was the 
 > * On the gallery page in small size sizes the captions underneath the bootstrap carousel images are hidden, along with in caption information accompanying the videos. 
 
 ![image](docs/images/screenshots/index-mobile.png) ![image](docs/images/screenshots/index-mobile-nav-active.png) ![image](docs/images/screenshots/about-mobile.png) ![image](docs/images/screenshots/gallery-mobile.png) ![image](docs/images/screenshots/get-in-touch-mobile.png)
@@ -192,17 +176,27 @@
 
 [**W3C Validator :**](https://validator.w3.org/)
 
-> * **Index.html -** ![Image](docs/images/testing-images/index.html-w3c-validator.png)
+> * **base.html -** ![Image](docs/images/testing-images/index.html-w3c-validator.png)
 
-> * **about.html -** ![Image](docs/images/testing-images/about.html-w3c-validator.png)
+> * **recipes.html -** ![Image](docs/images/testing-images/about.html-w3c-validator.png)
 
-> * **gallery.html -** ![Image](docs/images/testing-images/gallery.html-w3c-validator.png) 
+> * **register.html -** ![Image](docs/images/testing-images/gallery.html-w3c-validator.png) 
 
-> * **get-in-touch.html -** ![Image](docs/images/testing-images/get-in-touch.html-w3c-validator.png)
+> * **profile.html -** ![Image](docs/images/testing-images/get-in-touch.html-w3c-validator.png)
+
+> * **login.html -** ![Image](docs/images/testing-images/get-in-touch.html-w3c-validator.png)
+
+> * **edit_recipe.html -** ![Image](docs/images/testing-images/get-in-touch.html-w3c-validator.png)
+
+> * **add_recipe.html -** ![Image](docs/images/testing-images/get-in-touch.html-w3c-validator.png)
 
 [**CSS Validator :**](https://jigsaw.w3.org/css-validator/)
 
 > * **style.css -** ![Image](docs/images/testing-images/style.css-jigsaw-validator.png)
+
+[**Python Validator :**](http://pep8online.com/)
+
+> * **appp.py -** ![Image](docs/images/testing-images/style.css-jigsaw-validator.png)
 
 [**Google Lighthouse :**](https://developers.google.com/web/tools/lighthouse/) (Can be launched viva the inspect browser window, far right of the top tab within the dropdown menu)
 >Home Page - 
@@ -263,23 +257,15 @@
 # CREDITS
 ---
 **Hints/Tips/Documentation**
-> * [W3School](https://www.w3schools.com/) - For general HTML 5 & CSS 3 help.
+> * [Python Documentation](https://www.python.org/shell/) - For Python documentation and guides.
+> * [W3School](https://www.w3schools.com/) - For general HTML 5,  CSS 3 and Python help.
 > * [Stack Overflow](https://stackoverflow.com/) - Used for specific problems and fixes.
 > * [Bootstrap Documentation](https://getbootstrap.com/docs/5.0/getting-started/introduction/) - Informing layout and content of website. Instrumental in execution of project.
 > * [Google](https://www.google.com/) - When in doubt...
 
 **References**
-> * [Code Institute](https://codeinstitute.net/) - Project inspired by Rosie (resume-project) & Whiskey Drop project.
-> * [Wikipedia](https://www.wikipedia.org/) - Pages used as links in 'about.html' learn more buttons.
-> 1. History link and section - https://en.wikipedia.org/wiki/History_of_New_Zealand
-> 2. Wildlife link and section - https://en.wikipedia.org/wiki/Biodiversity_of_New_Zealand
-> 3. Activites link and section - https://en.wikipedia.org/wiki/Tourism_in_New_Zealand
-> * [Google maps](https://www.google.co.uk/maps) - Used for pindrop link in bootstrap carousel caption area.
-> * **Text & Images** - Text generation by myself and [Wikipedia](https://www.wikipedia.org/). Background images and gallery elements for the Project were taken by myself.
-> * [Pixabay](https://pixabay.com/) - Images from site used for about pages card pictures.
-> 1. Card 1 Maori image - Picture uploaded by Barni1.
-> 2. Card 2 Kea image - Picture uploaded by Barni1.
-> 3. Card 3 Tekapo image - Picture uploaded by bougetonglobe.
+> * [Code Institute](https://codeinstitute.net/) - Project inspired by Task Manager project.
+
 
 **Special Mentions**
 > * Code Institute/Slack community  - for the support and motivation
