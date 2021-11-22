@@ -20,8 +20,7 @@
         </div>
         <div class="form-floating mb-3">
             <!-- Recipe Description -->
-            <textarea class="form-control" id="recipe_description" name="recipe_description" type="text"
-             style="height: 10rem;" required>{{ recipe.recipe_description }}</textarea>
+            <textarea class="form-control" id="recipe_description" name="recipe_description" style="height: 10rem;" required>{{ recipe.recipe_description }}</textarea>
             <label for="recipe_description">Recipe Description</label>
             <div class="invalid-feedback" data-sb-feedback="recipeDescription:required">Recipe Description is required.</div>
         </div>
@@ -45,7 +44,7 @@
                 <div class="form-floating mb-3">
                     <!-- Cooking Difficulty (easy, Medium, Hard) -->
                     <select class="form-select" id="recipe_difficulty" name="recipe_difficulty" required>
-                        <option value="Easy">Easy</option>
+                        <option value="">Easy</option>
                         <option value="Medium">Medium</option>
                         <option value="Hard">Hard</option>
                     </select>
@@ -73,14 +72,14 @@
         </div>
         <div class="form-floating mb-3">
             <!-- Ingredients with Quantities -->
-            <textarea class="form-control" id="ingredients" name="ingredients" type="text" 
+            <textarea class="form-control" id="ingredients" name="ingredients" 
             style="height: 7rem;" required>{{ recipe.ingredients }}</textarea>
             <label for="ingredients">Ingredients With Quantities</label>
             <div class="invalid-feedback" data-sb-feedback="ingredientsWithQuantities:required">Ingredients With Quantities is required.</div>
         </div>
         <div class="form-floating mb-3">
             <!-- Cooking method -->
-            <textarea class="form-control" id="method" name="method" type="text" 
+            <textarea class="form-control" id="method" name="method" 
             style="height: 10rem;" required>{{ recipe.method }}</textarea>
             <label for="method">Method</label>
         </div>
